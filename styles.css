@@ -1,0 +1,217 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+}
+.recipe-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.custom-checkbox:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+.custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.step-content {
+  flex: 1;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-up-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in-up-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-in-up-delay-3 {
+  animation-delay: 0.9s;
+}
+
+/* Rotating animation */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotate360 20s linear infinite;
+}
+
+/* Background images for recipe categories */
+.category-bg-breakfast {
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.category-bg-main-dishes {
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.category-bg-side-dishes {
+  background-image: url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.category-bg-appetizers {
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.category-bg-desserts {
+  background-image: url('https://images.unsplash.com/photo-1505253210343-0a0a0a0a0a0a?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.category-bg-drinks {
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+/* Overlay for better text readability */
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 0;
+}
+
+/* Content inside category block */
+.category-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply rotation to background */
+.category-rotate-bg {
+  position: absolute;
+  inset: 0;
+  animation: rotate360 20s linear infinite;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  z-index: 0;
+}

@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homemade Pasta Carbonara Recipe</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#f97316",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #fafafa;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Merriweather", serif;
+      }
+      .recipe-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      .custom-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        margin-right: 12px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .custom-checkbox:checked {
+        background-color: #3b82f6;
+        border-color: #3b82f6;
+      }
+      .custom-checkbox:checked::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 6px;
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+        margin-right: 16px;
+        flex-shrink: 0;
+      }
+      .step-content {
+        flex: 1;
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 5px;
+        outline: none;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #3b82f6;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #3b82f6;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <header class="bg-white shadow-sm py-4">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-xl font-['Pacifico'] text-gray-800">logo</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+                >Recipes</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search recipes..."
+              class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+            />
+            <div
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400"
+            >
+              <i class="ri-search-line"></i>
+            </div>
+          </div>
+          <a
+            href="signin.html"
+          >
+            <button
+              class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
+            >
+              Sign In
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+      <div
+        class="recipe-container bg-white rounded-lg shadow-sm overflow-hidden"
+      >
+        <div class="relative h-[400px] overflow-hidden">
+          <img
+            src="https://readdy.ai/api/search-image?query=A%20gourmet%20pasta%20carbonara%20dish%20with%20perfectly%20cooked%20spaghetti%20tossed%20in%20a%20creamy%20egg%20and%20cheese%20sauce%2C%20garnished%20with%20crispy%20pancetta%2C%20freshly%20ground%20black%20pepper%2C%20and%20finely%20chopped%20parsley.%20The%20dish%20is%20presented%20on%20an%20elegant%20white%20ceramic%20plate%20with%20a%20fork%20twirling%20some%20pasta.%20The%20lighting%20is%20soft%20and%20warm%2C%20highlighting%20the%20silky%20texture%20of%20the%20sauce%20and%20the%20golden%20color%20of%20the%20pasta.&width=1600&height=900&seq=1&orientation=landscape"
+            alt="Pasta Carbonara"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+        <div class="p-6 md:p-8">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Classic Pasta Carbonara
+          </h1>
+          <p class="text-gray-600 mb-6">
+            A traditional Roman pasta dish featuring creamy eggs, crispy
+            pancetta, and sharp Pecorino Romano cheese. This simple yet elegant
+            dish comes together in just minutes for a quick weeknight dinner
+            that tastes like you spent hours in the kitchen.
+          </p>
+          <div class="flex flex-wrap gap-6 mb-8 border-b border-gray-100 pb-8">
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center text-primary"
+              >
+                <i class="ri-time-line ri-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">PREP TIME</p>
+                <p class="font-medium">15 mins</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center text-primary"
+              >
+                <i class="ri-fire-line ri-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">COOK TIME</p>
+                <p class="font-medium">20 mins</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center text-primary"
+              >
+                <i class="ri-restaurant-line ri-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">SERVINGS</p>
+                <p class="font-medium">4 servings</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center text-primary"
+              >
+                <i class="ri-scales-3-line ri-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">CALORIES</p>
+                <p class="font-medium">650 kcal</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-2/5">
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">
+                  Ingredients
+                </h2>
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500 mb-2">Adjust servings:</p>
+                  <div class="flex items-center gap-3">
+                    <button
+                      class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                    >
+                      <i class="ri-subtract-line"></i>
+                    </button>
+                    <span class="font-medium">4</span>
+                    <button
+                      class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                    >
+                      <i class="ri-add-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span><strong>400g</strong> spaghetti or bucatini</span>
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span
+                      ><strong>150g</strong> pancetta or guanciale, diced</span
+                    >
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span><strong>4</strong> large eggs, room temperature</span>
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span
+                      ><strong>100g</strong> Pecorino Romano, freshly
+                      grated</span
+                    >
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span
+                      ><strong>50g</strong> Parmigiano Reggiano, freshly
+                      grated</span
+                    >
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span>Freshly ground black pepper, to taste</span>
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span>Sea salt, for pasta water</span>
+                  </div>
+                  <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox" />
+                    <span>Fresh parsley, chopped (optional)</span>
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <button
+                    class="flex items-center gap-2 text-primary font-medium !rounded-button whitespace-nowrap"
+                  >
+                    <i class="ri-printer-line"></i> Print ingredients
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-3/5">
+              <h2 class="text-xl font-bold mb-6 text-gray-800">Instructions</h2>
+              <div class="space-y-6">
+                <div class="flex">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <p>
+                      Bring a large pot of water to a boil. Add salt generously
+                      (about 1 tablespoon per liter of water). The pasta water
+                      should taste like the sea.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <p>
+                      In a large mixing bowl, whisk together the eggs, grated
+                      Pecorino Romano, and Parmigiano Reggiano until well
+                      combined. Season with freshly ground black pepper. Set
+                      aside.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <p>
+                      In a large skillet over medium heat, cook the diced
+                      pancetta until crispy and golden, about 5-7 minutes. The
+                      fat should render out and the meat should be crisp. Remove
+                      from heat but keep the rendered fat in the pan.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-blue-50 p-4 rounded-lg my-4 border-l-4 border-primary"
+                >
+                  <div class="flex items-start">
+                    <div
+                      class="w-6 h-6 flex items-center justify-center text-primary mt-0.5"
+                    >
+                      <i class="ri-lightbulb-line"></i>
+                    </div>
+                    <div class="ml-3">
+                      <h4 class="font-medium text-gray-800">Chef's Tip</h4>
+                      <p class="text-sm text-gray-600">
+                        For authentic carbonara, guanciale (cured pork jowl) is
+                        traditional, but pancetta or even thick-cut bacon can be
+                        substituted if guanciale is unavailable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <p>
+                      Cook the pasta according to package instructions until al
+                      dente. Reserve about 1 cup of the pasta cooking water
+                      before draining.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">5</div>
+                  <div class="step-content">
+                    <p>
+                      Working quickly, add the hot drained pasta to the skillet
+                      with the pancetta and toss to coat in the rendered fat. If
+                      the skillet has cooled too much, briefly heat it over low
+                      heat.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">6</div>
+                  <div class="step-content">
+                    <p>
+                      Remove the skillet from heat and quickly add the pasta to
+                      the bowl with the egg and cheese mixture. Toss rapidly to
+                      coat the pasta, adding a splash of the reserved pasta
+                      water as needed to create a creamy sauce. The residual
+                      heat from the pasta will cook the eggs without scrambling
+                      them.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="step-number">7</div>
+                  <div class="step-content">
+                    <p>
+                      Serve immediately, garnished with additional grated
+                      cheese, freshly ground black pepper, and chopped parsley
+                      if desired.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                <h3 class="text-lg font-bold mb-3 text-gray-800">
+                  Recipe Notes
+                </h3>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                  <li>
+                    The key to creamy carbonara is working quickly once the
+                    pasta is cooked. Have all ingredients ready before cooking
+                    the pasta.
+                  </li>
+                  <li>
+                    Never add cream to authentic carbonara. The creaminess comes
+                    from the emulsion of eggs, cheese, and pasta water.
+                  </li>
+                  <li>
+                    If you're concerned about consuming raw eggs, use
+                    pasteurized eggs.
+                  </li>
+                  <li>
+                    Carbonara will thicken as it cools, so serve immediately for
+                    the best texture.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 border-t border-gray-100 pt-8">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">
+              Nutrition Information
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-xs text-gray-500">CALORIES</p>
+                <p class="font-bold text-lg">650 kcal</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-xs text-gray-500">PROTEIN</p>
+                <p class="font-bold text-lg">28g</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-xs text-gray-500">CARBS</p>
+                <p class="font-bold text-lg">65g</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-xs text-gray-500">FAT</p>
+                <p class="font-bold text-lg">32g</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">Reviews</h3>
+            <div class="flex items-center mb-6">
+              <div class="flex items-center mr-4">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <span class="ml-2 text-gray-700 font-medium">4.7</span>
+              </div>
+              <span class="text-gray-500">(124 reviews)</span>
+            </div>
+            <div class="space-y-6">
+              <div class="border-b border-gray-100 pb-6">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-medium"
+                  >
+                    JD
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-medium">James Davidson</p>
+                    <div class="flex text-yellow-400 text-sm">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <div class="ml-auto text-gray-500 text-sm">May 2, 2025</div>
+                </div>
+                <p class="text-gray-700">
+                  This recipe is perfect! I've tried many carbonara recipes and
+                  this is by far the most authentic and delicious. The tip about
+                  using pasta water to create the creamy sauce was a
+                  game-changer for me.
+                </p>
+              </div>
+              <div class="border-b border-gray-100 pb-6">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-medium"
+                  >
+                    EM
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-medium">Emily Martinez</p>
+                    <div class="flex text-yellow-400 text-sm">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-line"></i>
+                    </div>
+                  </div>
+                  <div class="ml-auto text-gray-500 text-sm">
+                    April 28, 2025
+                  </div>
+                </div>
+                <p class="text-gray-700">
+                  Delicious and simple! I substituted bacon since I couldn't
+                  find pancetta, and it still turned out great. Will definitely
+                  make again. My only suggestion would be to add a bit more
+                  cheese for extra creaminess.
+                </p>
+              </div>
+            </div>
+            <div class="mt-6">
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                <i class="ri-chat-1-line mr-2"></i> Read all reviews
+              </button>
+            </div>
+          </div>
+          <div class="mt-10 border-t border-gray-100 pt-8">
+            <h3 class="text-xl font-bold mb-6 text-gray-800">
+              You Might Also Like
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="rounded-lg overflow-hidden shadow-sm">
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=A%20delicious%20plate%20of%20spaghetti%20aglio%20e%20olio%20with%20olive%20oil%2C%20garlic%2C%20red%20pepper%20flakes%2C%20and%20freshly%20chopped%20parsley.%20The%20pasta%20is%20perfectly%20cooked%20and%20glistening%20with%20oil.%20The%20dish%20is%20presented%20on%20a%20white%20ceramic%20plate%20with%20a%20rustic%20wooden%20table%20background.%20The%20lighting%20is%20warm%20and%20inviting%2C%20highlighting%20the%20simplicity%20and%20elegance%20of%20this%20classic%20Italian%20dish.&width=400&height=300&seq=2&orientation=landscape"
+                    alt="Spaghetti Aglio e Olio"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold mb-1">Spaghetti Aglio e Olio</h4>
+                  <div class="flex text-yellow-400 text-sm mb-2">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <span class="ml-1 text-gray-600">(86)</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    A simple Italian pasta dish with garlic, olive oil, and
+                    chili flakes.
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden shadow-sm">
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=A%20mouthwatering%20plate%20of%20cacio%20e%20pepe%20pasta%20with%20perfectly%20cooked%20spaghetti%20coated%20in%20a%20creamy%20sauce%20made%20from%20Pecorino%20Romano%20cheese%20and%20freshly%20ground%20black%20pepper.%20The%20pasta%20is%20twirled%20elegantly%20on%20a%20dark%20ceramic%20plate%2C%20with%20some%20grated%20cheese%20and%20black%20pepper%20sprinkled%20on%20top.%20The%20lighting%20is%20dramatic%20and%20highlights%20the%20texture%20of%20the%20sauce%20and%20the%20pasta.&width=400&height=300&seq=3&orientation=landscape"
+                    alt="Cacio e Pepe"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold mb-1">Cacio e Pepe</h4>
+                  <div class="flex text-yellow-400 text-sm mb-2">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                    <span class="ml-1 text-gray-600">(103)</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    A classic Roman pasta dish with cheese and black pepper.
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden shadow-sm">
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=A%20beautiful%20plate%20of%20pasta%20alla%20puttanesca%20with%20spaghetti%20tossed%20in%20a%20rich%20tomato%20sauce%20with%20olives%2C%20capers%2C%20anchovies%2C%20and%20red%20pepper%20flakes.%20The%20pasta%20is%20garnished%20with%20fresh%20basil%20leaves%20and%20grated%20Parmesan%20cheese.%20The%20dish%20is%20presented%20on%20a%20rustic%20ceramic%20plate%20with%20some%20Italian%20bread%20on%20the%20side.%20The%20lighting%20is%20warm%20and%20inviting%2C%20highlighting%20the%20vibrant%20colors%20of%20the%20sauce.&width=400&height=300&seq=4&orientation=landscape"
+                    alt="Pasta Puttanesca"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold mb-1">Pasta Puttanesca</h4>
+                  <div class="flex text-yellow-400 text-sm mb-2">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <span class="ml-1 text-gray-600">(78)</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    A flavorful Italian pasta dish with tomatoes, olives, and
+                    capers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- New Recipes Start -->
+          <div
+            class="recipe-container bg-white rounded-lg shadow-sm overflow-hidden mt-16"
+          >
+            <div class="relative h-[400px] overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=A%20classic%20lasagna%20dish%20with%20layers%20of%20pasta%2C%20rich%20meat%20sauce%2C%20creamy%20béchamel%20sauce%2C%20and%20melted%20cheese%2C%20baked%20to%20golden%20perfection.&width=1600&height=900&seq=5&orientation=landscape"
+                alt="Classic Lasagna"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Classic Lasagna
+              </h1>
+              <p class="text-gray-600 mb-6">
+                A hearty Italian dish with layers of pasta, rich meat sauce,
+                creamy béchamel, and melted cheese. Perfect for family dinners
+                and special occasions.
+              </p>
+              <div
+                class="flex flex-wrap gap-6 mb-8 border-b border-gray-100 pb-8"
+              >
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">PREP TIME</p>
+                    <p class="font-medium">30 mins</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-fire-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">COOK TIME</p>
+                    <p class="font-medium">1 hr 15 mins</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-restaurant-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">SERVINGS</p>
+                    <p class="font-medium">6 servings</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-scales-3-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">CALORIES</p>
+                    <p class="font-medium">700 kcal</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-2/5">
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800">
+                      Ingredients
+                    </h2>
+                    <div class="mb-4">
+                      <p class="text-sm text-gray-500 mb-2">Adjust servings:</p>
+                      <div class="flex items-center gap-3">
+                        <button
+                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                        >
+                          <i class="ri-subtract-line"></i>
+                        </button>
+                        <span class="font-medium">6</span>
+                        <button
+                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                        >
+                          <i class="ri-add-line"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="space-y-1">
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>12</strong> lasagna noodles</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>1 lb</strong> ground beef</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>2 cups</strong> ricotta cheese</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span
+                          ><strong>3 cups</strong> shredded mozzarella
+                          cheese</span
+                        >
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>2 cups</strong> marinara sauce</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span
+                          ><strong>1/2 cup</strong> grated Parmesan cheese</span
+                        >
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span>Salt and pepper, to taste</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span>Fresh basil leaves, chopped (optional)</span>
+                      </div>
+                    </div>
+                    <div class="mt-6">
+                      <button
+                        class="flex items-center gap-2 text-primary font-medium !rounded-button whitespace-nowrap"
+                      >
+                        <i class="ri-printer-line"></i> Print ingredients
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <h2 class="text-xl font-bold mb-6 text-gray-800">
+                    Instructions
+                  </h2>
+                  <div class="space-y-6">
+                    <div class="flex">
+                      <div class="step-number">1</div>
+                      <div class="step-content">
+                        <p>Preheat oven to 375°F (190°C).</p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">2</div>
+                      <div class="step-content">
+                        <p>
+                          Cook lasagna noodles according to package
+                          instructions. Drain and set aside.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">3</div>
+                      <div class="step-content">
+                        <p>
+                          In a large skillet, brown the ground beef over medium
+                          heat. Drain excess fat.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">4</div>
+                      <div class="step-content">
+                        <p>
+                          Spread a thin layer of marinara sauce in the bottom of
+                          a 9x13 inch baking dish.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">5</div>
+                      <div class="step-content">
+                        <p>
+                          Layer noodles, ricotta, beef, mozzarella, and marinara
+                          sauce. Repeat layers.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">6</div>
+                      <div class="step-content">
+                        <p>
+                          Top with Parmesan cheese and bake for 45 minutes until
+                          bubbly and golden.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">7</div>
+                      <div class="step-content">
+                        <p>
+                          Let cool for 10 minutes before serving. Garnish with
+                          fresh basil if desired.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                    <h3 class="text-lg font-bold mb-3 text-gray-800">
+                      Recipe Notes
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                      <li>Use whole milk ricotta for creamier texture.</li>
+                      <li>Substitute ground turkey for a leaner option.</li>
+                      <li>
+                        Letting the lasagna rest helps it set for easier
+                        slicing.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10 border-t border-gray-100 pt-8">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">
+                  Nutrition Information
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">CALORIES</p>
+                    <p class="font-bold text-lg">700 kcal</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">PROTEIN</p>
+                    <p class="font-bold text-lg">35g</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">CARBS</p>
+                    <p class="font-bold text-lg">60g</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">FAT</p>
+                    <p class="font-bold text-lg">30g</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="recipe-container bg-white rounded-lg shadow-sm overflow-hidden mt-16"
+          >
+            <div class="relative h-[400px] overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=A%20fresh%20and%20creamy%20chicken%20alfredo%20pasta%20dish%20with%20fettuccine%2C%20grilled%20chicken%2C%20and%20a%20rich%20parmesan%20sauce.&width=1600&height=900&seq=6&orientation=landscape"
+                alt="Chicken Alfredo"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Chicken Alfredo
+              </h1>
+              <p class="text-gray-600 mb-6">
+                A creamy pasta dish featuring grilled chicken, fettuccine, and a
+                rich parmesan sauce. Perfect for a comforting meal.
+              </p>
+              <div
+                class="flex flex-wrap gap-6 mb-8 border-b border-gray-100 pb-8"
+              >
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">PREP TIME</p>
+                    <p class="font-medium">20 mins</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-fire-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">COOK TIME</p>
+                    <p class="font-medium">25 mins</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-restaurant-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">SERVINGS</p>
+                    <p class="font-medium">4 servings</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-scales-3-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">CALORIES</p>
+                    <p class="font-medium">600 kcal</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-2/5">
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800">
+                      Ingredients
+                    </h2>
+                    <div class="mb-4">
+                      <p class="text-sm text-gray-500 mb-2">Adjust servings:</p>
+                      <div class="flex items-center gap-3">
+                        <button
+                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                        >
+                          <i class="ri-subtract-line"></i>
+                        </button>
+                        <span class="font-medium">4</span>
+                        <button
+                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
+                        >
+                          <i class="ri-add-line"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="space-y-1">
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>12 oz</strong> fettuccine pasta</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span
+                          ><strong>2</strong> grilled chicken breasts,
+                          sliced</span
+                        >
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>1 cup</strong> heavy cream</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span
+                          ><strong>1 cup</strong> grated Parmesan cheese</span
+                        >
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span><strong>2 tbsp</strong> butter</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span>Salt and pepper, to taste</span>
+                      </div>
+                      <div class="checkbox-container">
+                        <input type="checkbox" class="custom-checkbox" />
+                        <span>Fresh parsley, chopped (optional)</span>
+                      </div>
+                    </div>
+                    <div class="mt-6">
+                      <button
+                        class="flex items-center gap-2 text-primary font-medium !rounded-button whitespace-nowrap"
+                      >
+                        <i class="ri-printer-line"></i> Print ingredients
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <h2 class="text-xl font-bold mb-6 text-gray-800">
+                    Instructions
+                  </h2>
+                  <div class="space-y-6">
+                    <div class="flex">
+                      <div class="step-number">1</div>
+                      <div class="step-content">
+                        <p>
+                          Cook fettuccine pasta according to package
+                          instructions. Drain and set aside.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">2</div>
+                      <div class="step-content">
+                        <p>
+                          In a large skillet, melt butter over medium heat. Add
+                          heavy cream and bring to a simmer.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">3</div>
+                      <div class="step-content">
+                        <p>
+                          Stir in grated Parmesan cheese until sauce thickens.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">4</div>
+                      <div class="step-content">
+                        <p>
+                          Add sliced grilled chicken to the sauce and heat
+                          through.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="step-number">5</div>
+                      <div class="step-content">
+                        <p>
+                          Serve pasta topped with chicken and garnish with fresh
+                          parsley if desired.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                    <h3 class="text-lg font-bold mb-3 text-gray-800">
+                      Recipe Notes
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                      <li>Use freshly grated Parmesan for best flavor.</li>
+                      <li>
+                        Substitute grilled shrimp for chicken for a seafood
+                        twist.
+                      </li>
+                      <li>
+                        Adjust cream thickness by adding more or less heavy
+                        cream.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10 border-t border-gray-100 pt-8">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">
+                  Nutrition Information
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">CALORIES</p>
+                    <p class="font-bold text-lg">600 kcal</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">PROTEIN</p>
+                    <p class="font-bold text-lg">30g</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">CARBS</p>
+                    <p class="font-bold text-lg">55g</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-xs text-gray-500">FAT</p>
+                    <p class="font-bold text-lg">28g</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- New Recipes End -->
+        </div>
+      </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-['Pacifico'] text-2xl mb-4">logo</h3>
+            <p class="text-gray-300 mb-4">
+              Discover delicious recipes from around the world, created and
+              tested by our team of culinary experts.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-pinterest-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Recipe Categories</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Breakfast</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Main Dishes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Side Dishes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Appetizers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Desserts</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Drinks</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Recipe Index</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Subscribe</h4>
+            <p class="text-gray-300 mb-4">
+              Get our latest recipes and cooking tips sent to your inbox weekly.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="px-4 py-2 rounded-l-lg text-gray-800 w-full border-none"
+              />
+              <button
+                class="bg-primary text-white px-4 py-2 rounded-r-lg font-medium hover:bg-primary/90 transition !rounded-button whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Recipe Finder. All rights reserved.
+          </p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <i class="ri-visa-line ri-lg"></i>
+            <i class="ri-mastercard-line ri-lg"></i>
+            <i class="ri-paypal-line ri-lg"></i>
+            <i class="ri-apple-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkboxes = document.querySelectorAll(".custom-checkbox");
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("click", function () {
+            this.checked = !this.checked;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
