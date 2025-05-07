@@ -44,15 +44,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
     <link rel="stylesheet" href="styles2.css" />
-    
-    
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="bg-gradient-to-r from-primary to-secondary shadow-md py-4">
       <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-xl font-pacifico text-white drop-shadow-md">
-          Recipe Finder
-        </h1>
+        <h1 class="text-xl font-['Pacifico'] text-white drop-shadow-md">logo</h1>
         <nav>
           <ul class="flex space-x-8">
             <li>
@@ -70,16 +66,12 @@
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-white hover:text-white/90 font-semibold transition"
+              <a href="#" class="text-white hover:text-white/90 font-semibold transition"
                 >Categories</a
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-white hover:text-white/90 font-semibold transition"
+              <a href="#" class="text-white hover:text-white/90 font-semibold transition"
                 >About</a
               >
             </li>
@@ -89,7 +81,6 @@
           <div class="relative">
             <input
               type="text"
-              id="search-input"
               placeholder="Search recipes..."
               class="pl-10 pr-4 py-2 rounded-full text-sm border border-white/30 bg-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white text-white"
             />
@@ -99,7 +90,10 @@
               <i class="ri-search-line"></i>
             </div>
           </div>
-          <a href="signin.html" data-readdy="true">
+          <a
+            href="signin.html"
+            data-readdy="true"
+          >
             <button
               class="bg-white text-primary px-4 py-2 rounded-button font-semibold hover:bg-white/90 transition whitespace-nowrap"
             >
@@ -110,52 +104,44 @@
       </div>
     </header>
 
-    <!-- Recipe Search Results Modal -->
-    <div id="search-results-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Search Results</h2>
-        <div id="search-results" class="search-results-container"></div>
-      </div>
-    </div>
-
-    <!-- Recipe Details Modal -->
-    <div id="recipe-details-modal" class="modal">
-      <div class="modal-content recipe-details-content">
-        <span class="close-details">&times;</span>
-        <div id="recipe-details" class="recipe-details-container">
-          <!-- Recipe details will be inserted here -->
+      <!-- Recipe Search Results Modal -->
+      <div id="search-results-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Search Results</h2>
+          <div id="search-results" class="search-results-container"></div>
         </div>
       </div>
-    </div>
+  
+      <!-- Recipe Details Modal -->
+      <div id="recipe-details-modal" class="modal">
+        <div class="modal-content recipe-details-content">
+          <span class="close-details">&times;</span>
+          <div id="recipe-details" class="recipe-details-container">
+            <!-- Recipe details will be inserted here -->
+          </div>
+        </div>
+      </div>
 
     <main class="flex-grow container mx-auto px-4 py-12">
       <section class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4 text-gray-800 fade-in-up">
           Welcome to Recipe Finder
         </h2>
-        <p
-          class="text-gray-600 max-w-2xl mx-auto fade-in-up fade-in-up-delay-1"
-        >
+        <p class="text-gray-600 max-w-2xl mx-auto fade-in-up fade-in-up-delay-1">
           Discover delicious recipes from around the world, created and tested
           by our team of culinary experts. Find your next favorite meal today!
         </p>
       </section>
-
       <section class="mb-16">
-        <h3
-          class="text-2xl font-bold mb-6 text-gray-800 fade-in-up fade-in-up-delay-2"
-        >
-          Featured Recipes
-        </h3>
+        <h3 class="text-2xl font-bold mb-6 text-gray-800 fade-in-up fade-in-up-delay-2">Featured Recipes</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a
-            href="#"
-            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition fade-in-up fade-in-up-delay-3 featured-recipe"
-            data-recipe="pasta carbonara"
+            href="index.html"
+            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition fade-in-up fade-in-up-delay-3"
           >
             <img
-              src=""
+              src="https://readdy.ai/api/search-image?query=A%20gourmet%20pasta%20carbonara%20dish%20with%20perfectly%20cooked%20spaghetti%20tossed%20in%20a%20creamy%20egg%20and%20cheese%20sauce%2C%20garnished%20with%20crispy%20pancetta%2C%20freshly%20ground%20black%20pepper%2C%20and%20finely%20chopped%20parsley.%20The%20dish%20is%20presented%20on%20an%20elegant%20white%20ceramic%20plate%20with%20a%20fork%20twirling%20some%20pasta.%20The%20lighting%20is%20soft%20and%20warm%2C%20highlighting%20the%20silky%20texture%20of%20the%20sauce%20and%20the%20golden%20color%20of%20the%20pasta.&width=400&height=300&seq=1&orientation=landscape"
               alt="Classic Pasta Carbonara"
               class="w-full h-48 object-cover object-top"
             />
@@ -169,14 +155,12 @@
               </p>
             </div>
           </a>
-
           <a
             href="#"
-            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition featured-recipe"
-            data-recipe="lasagna"
+            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition"
           >
             <img
-              src="https://source.unsplash.com/400x300/?lasagna"
+              src="https://readdy.ai/api/search-image?query=A%20classic%20lasagna%20dish%20with%20layers%20of%20pasta%2C%20rich%20meat%20sauce%2C%20creamy%20béchamel%20sauce%2C%20and%20melted%20cheese%2C%20baked%20to%20golden%20perfection.&width=400&height=300&seq=5&orientation=landscape"
               alt="Classic Lasagna"
               class="w-full h-48 object-cover object-top"
             />
@@ -188,14 +172,12 @@
               </p>
             </div>
           </a>
-
           <a
             href="#"
-            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition featured-recipe"
-            data-recipe="chicken alfredo"
+            class="block rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition"
           >
             <img
-              src="https://source.unsplash.com/400x300/?chicken,pasta"
+              src="https://readdy.ai/api/search-image?query=A%20fresh%20and%20creamy%20chicken%20alfredo%20pasta%20dish%20with%20fettuccine%2C%20grilled%20chicken%2C%20and%20a%20rich%20parmesan%20sauce.&width=400&height=300&seq=6&orientation=landscape"
               alt="Chicken Alfredo"
               class="w-full h-48 object-cover object-top"
             />
@@ -209,89 +191,65 @@
           </a>
         </div>
       </section>
-
       <section>
         <h3 class="text-2xl font-bold mb-6 text-gray-800">Recipe Categories</h3>
         <div class="grid grid-cols-2 md:grid-cols-6 gap-6 justify-center">
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="breakfast"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-breakfast rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-breakfast rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
             <div class="category-content text-lg font-semibold">Breakfast</div>
           </a>
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="main course"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-main-dishes rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-main-dishes rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
-            <div class="category-content text-lg font-semibold">
-              Main Dishes
-            </div>
+            <div class="category-content text-lg font-semibold">Main Dishes</div>
           </a>
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="side dish"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-side-dishes rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-side-dishes rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
-            <div class="category-content text-lg font-semibold">
-              Side Dishes
-            </div>
+            <div class="category-content text-lg font-semibold">Side Dishes</div>
           </a>
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="appetizer"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-appetizers rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-appetizers rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
             <div class="category-content text-lg font-semibold">Appetizers</div>
           </a>
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="dessert"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-desserts rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-desserts rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
             <div class="category-content text-lg font-semibold">Desserts</div>
           </a>
           <a
             href="#"
-            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden category-link"
-            data-category="drinks"
+            class="relative block rounded-full shadow-sm w-48 h-48 flex items-center justify-center text-center text-white transition overflow-hidden"
           >
-            <div
-              class="category-rotate-bg category-bg-drinks rounded-full"
-            ></div>
+            <div class="category-rotate-bg category-bg-drinks rounded-full"></div>
             <div class="category-overlay rounded-full"></div>
             <div class="category-content text-lg font-semibold">Drinks</div>
           </a>
         </div>
       </section>
     </main>
-
     <footer class="bg-gray-800 text-white py-12 mt-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 class="font-pacifico text-2xl mb-4">Recipe Finder</h3>
+            <h3 class="font-['Pacifico'] text-2xl mb-4">logo</h3>
             <p class="text-gray-300 mb-4">
               Discover delicious recipes from around the world, created and
               tested by our team of culinary experts.
@@ -323,61 +281,35 @@
               </a>
             </div>
           </div>
-
           <div>
             <h4 class="font-bold text-lg mb-4">Recipe Categories</h4>
             <ul class="space-y-2">
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="breakfast"
-                  >Breakfast</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white">Breakfast</a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="main course"
+                <a href="#" class="text-gray-300 hover:text-white"
                   >Main Dishes</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="side dish"
+                <a href="#" class="text-gray-300 hover:text-white"
                   >Side Dishes</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="appetizer"
+                <a href="#" class="text-gray-300 hover:text-white"
                   >Appetizers</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="dessert"
-                  >Desserts</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white">Desserts</a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-white category-link"
-                  data-category="drinks"
-                  >Drinks</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white">Drinks</a>
               </li>
             </ul>
           </div>
-
           <div>
             <h4 class="font-bold text-lg mb-4">Quick Links</h4>
             <ul class="space-y-2">
@@ -404,28 +336,25 @@
               </li>
             </ul>
           </div>
-
           <div>
             <h4 class="font-bold text-lg mb-4">Subscribe</h4>
             <p class="text-gray-300 mb-4">
               Get our latest recipes and cooking tips sent to your inbox weekly.
             </p>
-            <form class="flex">
+            <div class="flex">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Your email"
                 class="px-4 py-2 rounded-l-lg text-gray-800 w-full border-none"
               />
               <button
-                type="submit"
                 class="bg-primary text-white px-4 py-2 rounded-r-lg font-medium hover:bg-primary/90 transition !rounded-button whitespace-nowrap"
               >
                 Subscribe
               </button>
-            </form>
+            </div>
           </div>
         </div>
-
         <div
           class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
         >
@@ -441,7 +370,7 @@
         </div>
       </div>
     </footer>
-
     <script src="script.js"></script>
+
   </body>
 </html>
