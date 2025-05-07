@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - Recipe Finder</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#f97316",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-white shadow-sm py-4">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-xl font-['Pacifico'] text-gray-800">Recipe Finder</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="index.html"
+                class="text-gray-600 hover:text-primary font-medium"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="recipe.html"
+                class="text-gray-600 hover:text-primary font-medium"
+                >Recipes</a
+              >
+            </li>
+            <li>
+              <a
+                href="#categories"
+                class="text-gray-600 hover:text-primary font-medium"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-primary font-medium underline"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="signin.html">
+            <button
+              class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
+            >
+              Sign In
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-4 py-12">
+      <h2 class="text-4xl font-bold mb-6 text-gray-800">About Us</h2>
+      <p class="mb-6 text-lg leading-relaxed">
+        Welcome to Recipe Finder, your ultimate destination for discovering delicious recipes from around the world. Our mission is to inspire and empower home cooks of all skill levels to create amazing meals with ease and confidence.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        Our team of culinary experts carefully curates and tests every recipe to ensure quality, flavor, and simplicity. Whether you're looking for quick weeknight dinners, healthy options, or indulgent treats, Recipe Finder has something for everyone.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        We believe that cooking should be enjoyable and accessible, and we strive to provide clear instructions, helpful tips, and beautiful photos to guide you every step of the way.
+      </p>
+      <section class="mt-12">
+        <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+        <p class="mb-6 text-lg leading-relaxed">
+          Founded in 2023, Recipe Finder started as a passion project to bring together food lovers and share the joy of cooking. Over time, it has grown into a vibrant community of home chefs who share their favorite recipes and culinary experiences.
+        </p>
+      </section>
+      <section class="mt-12">
+        <h3 class="text-2xl font-semibold mb-4">Meet the Team</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Jane Doe"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-bold mb-1">Jane Doe</h4>
+            <p class="text-gray-600">Founder & Head Chef</p>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <img
+              src="https://randomuser.me/api/portraits/men/46.jpg"
+              alt="John Smith"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-bold mb-1">John Smith</h4>
+            <p class="text-gray-600">Recipe Developer</p>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <img
+              src="https://randomuser.me/api/portraits/women/65.jpg"
+              alt="Emily Johnson"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-bold mb-1">Emily Johnson</h4>
+            <p class="text-gray-600">Community Manager</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-['Pacifico'] text-2xl mb-4">logo</h3>
+            <p class="text-gray-300 mb-4">
+              Discover delicious recipes from around the world, created and
+              tested by our team of culinary experts.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-pinterest-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Recipe Categories</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Breakfast</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Main Dishes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Side Dishes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Appetizers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Desserts</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Drinks</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Recipe Index</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Subscribe</h4>
+            <p class="text-gray-300 mb-4">
+              Get our latest recipes and cooking tips sent to your inbox weekly.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="px-4 py-2 rounded-l-lg text-gray-800 w-full border-none"
+              />
+              <button
+                class="bg-primary text-white px-4 py-2 rounded-r-lg font-medium hover:bg-primary/90 transition !rounded-button whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Recipe Finder. All rights reserved.
+          </p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <i class="ri-visa-line ri-lg"></i>
+            <i class="ri-mastercard-line ri-lg"></i>
+            <i class="ri-paypal-line ri-lg"></i>
+            <i class="ri-apple-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homemade Pasta Carbonara Recipe</title>
+    <title>Recipe</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
       tailwind.config = {
@@ -136,30 +136,35 @@
         border: none;
       }
     </style>
+    <link rel="stylesheet" href="styles2.css" />
   </head>
   <body class="min-h-screen">
-    <header class="bg-white shadow-sm py-4">
+    <header class="bg-gradient-to-r from-primary to-secondary shadow-md py-4">
       <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-xl font-['Pacifico'] text-gray-800">logo</h1>
+        <h1 class="text-xl font-pacifico text-white drop-shadow-md">Recipe Finder</h1>
         <nav>
           <ul class="flex space-x-6">
             <li>
-              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+              <a
+                href="index.html"
+                class="text-white hover:text-white/90 font-semibold transition"
                 >Home</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+              <a href="#" class="text-white hover:text-white/90 font-semibold transition"
                 >Recipes</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+              <a
+                href="#categories"
+                class="text-white hover:text-white/90 font-semibold transition"
                 >Categories</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-600 hover:text-primary font-medium"
+              <a href="#" class="text-white hover:text-white/90 font-semibold transition"
                 >About</a
               >
             </li>
@@ -169,8 +174,9 @@
           <div class="relative">
             <input
               type="text"
+              id="search-input"
               placeholder="Search recipes..."
-              class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              class="pl-10 pr-4 py-2 rounded-full text-sm border border-white/30 bg-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white text-white"
             />
             <div
               class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400"
@@ -178,9 +184,7 @@
               <i class="ri-search-line"></i>
             </div>
           </div>
-          <a
-            href="signin.html"
-          >
+          <a href="signin.html">
             <button
               class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
             >
@@ -635,476 +639,7 @@
               </div>
             </div>
           </div>
-          <!-- New Recipes Start -->
-          <div
-            class="recipe-container bg-white rounded-lg shadow-sm overflow-hidden mt-16"
-          >
-            <div class="relative h-[400px] overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=A%20classic%20lasagna%20dish%20with%20layers%20of%20pasta%2C%20rich%20meat%20sauce%2C%20creamy%20béchamel%20sauce%2C%20and%20melted%20cheese%2C%20baked%20to%20golden%20perfection.&width=1600&height=900&seq=5&orientation=landscape"
-                alt="Classic Lasagna"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6 md:p-8">
-              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-                Classic Lasagna
-              </h1>
-              <p class="text-gray-600 mb-6">
-                A hearty Italian dish with layers of pasta, rich meat sauce,
-                creamy béchamel, and melted cheese. Perfect for family dinners
-                and special occasions.
-              </p>
-              <div
-                class="flex flex-wrap gap-6 mb-8 border-b border-gray-100 pb-8"
-              >
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-time-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">PREP TIME</p>
-                    <p class="font-medium">30 mins</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-fire-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">COOK TIME</p>
-                    <p class="font-medium">1 hr 15 mins</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-restaurant-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">SERVINGS</p>
-                    <p class="font-medium">6 servings</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-scales-3-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">CALORIES</p>
-                    <p class="font-medium">700 kcal</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-2/5">
-                  <div class="bg-gray-50 rounded-lg p-6">
-                    <h2 class="text-xl font-bold mb-4 text-gray-800">
-                      Ingredients
-                    </h2>
-                    <div class="mb-4">
-                      <p class="text-sm text-gray-500 mb-2">Adjust servings:</p>
-                      <div class="flex items-center gap-3">
-                        <button
-                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                        >
-                          <i class="ri-subtract-line"></i>
-                        </button>
-                        <span class="font-medium">6</span>
-                        <button
-                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                        >
-                          <i class="ri-add-line"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="space-y-1">
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>12</strong> lasagna noodles</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>1 lb</strong> ground beef</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>2 cups</strong> ricotta cheese</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span
-                          ><strong>3 cups</strong> shredded mozzarella
-                          cheese</span
-                        >
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>2 cups</strong> marinara sauce</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span
-                          ><strong>1/2 cup</strong> grated Parmesan cheese</span
-                        >
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span>Salt and pepper, to taste</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span>Fresh basil leaves, chopped (optional)</span>
-                      </div>
-                    </div>
-                    <div class="mt-6">
-                      <button
-                        class="flex items-center gap-2 text-primary font-medium !rounded-button whitespace-nowrap"
-                      >
-                        <i class="ri-printer-line"></i> Print ingredients
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="md:w-3/5">
-                  <h2 class="text-xl font-bold mb-6 text-gray-800">
-                    Instructions
-                  </h2>
-                  <div class="space-y-6">
-                    <div class="flex">
-                      <div class="step-number">1</div>
-                      <div class="step-content">
-                        <p>Preheat oven to 375°F (190°C).</p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">2</div>
-                      <div class="step-content">
-                        <p>
-                          Cook lasagna noodles according to package
-                          instructions. Drain and set aside.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">3</div>
-                      <div class="step-content">
-                        <p>
-                          In a large skillet, brown the ground beef over medium
-                          heat. Drain excess fat.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">4</div>
-                      <div class="step-content">
-                        <p>
-                          Spread a thin layer of marinara sauce in the bottom of
-                          a 9x13 inch baking dish.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">5</div>
-                      <div class="step-content">
-                        <p>
-                          Layer noodles, ricotta, beef, mozzarella, and marinara
-                          sauce. Repeat layers.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">6</div>
-                      <div class="step-content">
-                        <p>
-                          Top with Parmesan cheese and bake for 45 minutes until
-                          bubbly and golden.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">7</div>
-                      <div class="step-content">
-                        <p>
-                          Let cool for 10 minutes before serving. Garnish with
-                          fresh basil if desired.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bg-gray-50 rounded-lg p-6 mt-8">
-                    <h3 class="text-lg font-bold mb-3 text-gray-800">
-                      Recipe Notes
-                    </h3>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                      <li>Use whole milk ricotta for creamier texture.</li>
-                      <li>Substitute ground turkey for a leaner option.</li>
-                      <li>
-                        Letting the lasagna rest helps it set for easier
-                        slicing.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-10 border-t border-gray-100 pt-8">
-                <h3 class="text-xl font-bold mb-3 text-gray-800">
-                  Nutrition Information
-                </h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">CALORIES</p>
-                    <p class="font-bold text-lg">700 kcal</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">PROTEIN</p>
-                    <p class="font-bold text-lg">35g</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">CARBS</p>
-                    <p class="font-bold text-lg">60g</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">FAT</p>
-                    <p class="font-bold text-lg">30g</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="recipe-container bg-white rounded-lg shadow-sm overflow-hidden mt-16"
-          >
-            <div class="relative h-[400px] overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=A%20fresh%20and%20creamy%20chicken%20alfredo%20pasta%20dish%20with%20fettuccine%2C%20grilled%20chicken%2C%20and%20a%20rich%20parmesan%20sauce.&width=1600&height=900&seq=6&orientation=landscape"
-                alt="Chicken Alfredo"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6 md:p-8">
-              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-                Chicken Alfredo
-              </h1>
-              <p class="text-gray-600 mb-6">
-                A creamy pasta dish featuring grilled chicken, fettuccine, and a
-                rich parmesan sauce. Perfect for a comforting meal.
-              </p>
-              <div
-                class="flex flex-wrap gap-6 mb-8 border-b border-gray-100 pb-8"
-              >
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-time-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">PREP TIME</p>
-                    <p class="font-medium">20 mins</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-fire-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">COOK TIME</p>
-                    <p class="font-medium">25 mins</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-restaurant-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">SERVINGS</p>
-                    <p class="font-medium">4 servings</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center text-primary"
-                  >
-                    <i class="ri-scales-3-line ri-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-500">CALORIES</p>
-                    <p class="font-medium">600 kcal</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-2/5">
-                  <div class="bg-gray-50 rounded-lg p-6">
-                    <h2 class="text-xl font-bold mb-4 text-gray-800">
-                      Ingredients
-                    </h2>
-                    <div class="mb-4">
-                      <p class="text-sm text-gray-500 mb-2">Adjust servings:</p>
-                      <div class="flex items-center gap-3">
-                        <button
-                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                        >
-                          <i class="ri-subtract-line"></i>
-                        </button>
-                        <span class="font-medium">4</span>
-                        <button
-                          class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                        >
-                          <i class="ri-add-line"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="space-y-1">
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>12 oz</strong> fettuccine pasta</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span
-                          ><strong>2</strong> grilled chicken breasts,
-                          sliced</span
-                        >
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>1 cup</strong> heavy cream</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span
-                          ><strong>1 cup</strong> grated Parmesan cheese</span
-                        >
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span><strong>2 tbsp</strong> butter</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span>Salt and pepper, to taste</span>
-                      </div>
-                      <div class="checkbox-container">
-                        <input type="checkbox" class="custom-checkbox" />
-                        <span>Fresh parsley, chopped (optional)</span>
-                      </div>
-                    </div>
-                    <div class="mt-6">
-                      <button
-                        class="flex items-center gap-2 text-primary font-medium !rounded-button whitespace-nowrap"
-                      >
-                        <i class="ri-printer-line"></i> Print ingredients
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="md:w-3/5">
-                  <h2 class="text-xl font-bold mb-6 text-gray-800">
-                    Instructions
-                  </h2>
-                  <div class="space-y-6">
-                    <div class="flex">
-                      <div class="step-number">1</div>
-                      <div class="step-content">
-                        <p>
-                          Cook fettuccine pasta according to package
-                          instructions. Drain and set aside.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">2</div>
-                      <div class="step-content">
-                        <p>
-                          In a large skillet, melt butter over medium heat. Add
-                          heavy cream and bring to a simmer.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">3</div>
-                      <div class="step-content">
-                        <p>
-                          Stir in grated Parmesan cheese until sauce thickens.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">4</div>
-                      <div class="step-content">
-                        <p>
-                          Add sliced grilled chicken to the sauce and heat
-                          through.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex">
-                      <div class="step-number">5</div>
-                      <div class="step-content">
-                        <p>
-                          Serve pasta topped with chicken and garnish with fresh
-                          parsley if desired.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bg-gray-50 rounded-lg p-6 mt-8">
-                    <h3 class="text-lg font-bold mb-3 text-gray-800">
-                      Recipe Notes
-                    </h3>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                      <li>Use freshly grated Parmesan for best flavor.</li>
-                      <li>
-                        Substitute grilled shrimp for chicken for a seafood
-                        twist.
-                      </li>
-                      <li>
-                        Adjust cream thickness by adding more or less heavy
-                        cream.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-10 border-t border-gray-100 pt-8">
-                <h3 class="text-xl font-bold mb-3 text-gray-800">
-                  Nutrition Information
-                </h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">CALORIES</p>
-                    <p class="font-bold text-lg">600 kcal</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">PROTEIN</p>
-                    <p class="font-bold text-lg">30g</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">CARBS</p>
-                    <p class="font-bold text-lg">55g</p>
-                  </div>
-                  <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-xs text-gray-500">FAT</p>
-                    <p class="font-bold text-lg">28g</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- New Recipes End -->
+         
         </div>
       </div>
     </main>
@@ -1207,7 +742,7 @@
             <div class="flex">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Your email"
                 class="px-4 py-2 rounded-l-lg text-gray-800 w-full border-none"
               />
               <button
@@ -1238,10 +773,27 @@
         const checkboxes = document.querySelectorAll(".custom-checkbox");
         checkboxes.forEach((checkbox) => {
           checkbox.addEventListener("click", function () {
-            this.checked = !this.checked;
+            // Allow the default behavior to toggle the checkbox state
           });
         });
       });
     </script>
+    <!-- Search Results Modal -->
+    <div id="search-results-modal" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+      <div class="modal-content" style="background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 600px; position: relative;">
+        <span class="close" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        <h2 style="margin-bottom: 15px;">Search Results</h2>
+        <div id="search-results" style="max-height: 400px; overflow-y: auto;"></div>
+      </div>
+    </div>
+
+    <!-- Recipe Details Modal -->
+    <div id="recipe-details-modal" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+      <div class="modal-content" style="background-color: #fff; margin: 5% auto; padding: 20px; border-radius: 8px; max-width: 700px; position: relative;">
+        <span class="close-details" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        <div id="recipe-details"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

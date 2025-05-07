@@ -16,11 +16,41 @@ const categoryLinks = document.querySelectorAll(".category-link");
 searchInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     const query = searchInput.value.trim();
+    console.log("Enter pressed, query:", query);
     if (query) {
       searchRecipes(query);
     }
   }
 });
+
+async function searchRecipes(query, selectFirst = false) {
+  try {
+    console.log("Searching recipes for query:", query);
+    const url = `https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&number=10&addRecipeInformation=true&apiKey=${API_KEY}`;
+
+    searchResultsContainer.innerHTML = '<p class="text-center">Loading recipes...</p>';
+    searchResultsModal.style.display = "block";
+
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("Received data:", data);
+
+    if (data.results && data.results.length > 0) {
+      if (selectFirst) {
+        displayRecipeDetails(data.results[0]);
+        searchResultsModal.style.display = "none";
+      } else {
+        displaySearchResults(data.results);
+      }
+    } else {
+      console.log("No recipes found for query:", query);
+      searchResultsContainer.innerHTML = '<p class="text-center">No recipes found. Try another search term.</p>';
+    }
+  } catch (error) {
+    console.error("Error fetching recipes:", error);
+    searchResultsContainer.innerHTML = '<p class="text-center">Error fetching recipes. Please try again later.</p>';
+  }
+}
 
 closeSearchBtn.addEventListener("click", () => (searchResultsModal.style.display = "none"));
 closeDetailsBtn.addEventListener("click", () => (recipeDetailsModal.style.display = "none"));
