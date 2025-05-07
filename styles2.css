@@ -496,27 +496,27 @@
   
   /* Category backgrounds */
   .category-bg-breakfast {
-    background-image: url('https://source.unsplash.com/200x200/?breakfast');
+    background-image: url('bk.jpeg');
   }
   
   .category-bg-main-dishes {
-    background-image: url('https://source.unsplash.com/200x200/?dinner');
+    background-image: url('md.jpeg');
   }
   
   .category-bg-side-dishes {
-    background-image: url('https://source.unsplash.com/200x200/?side,dish');
+    background-image: url('sd.jpeg');
   }
   
   .category-bg-appetizers {
-    background-image: url('https://source.unsplash.com/200x200/?appetizer');
+    background-image: url('ap.jpeg');
   }
   
   .category-bg-desserts {
-    background-image: url('https://source.unsplash.com/200x200/?dessert');
+    background-image: url('download.jpeg');
   }
   
   .category-bg-drinks {
-    background-image: url('https://source.unsplash.com/200x200/?drinks');
+    background-image: url('dr.jpeg');
   }
   
   /* Modal styles */
