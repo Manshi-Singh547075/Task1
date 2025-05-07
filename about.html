@@ -43,76 +43,111 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
-    <link rel="stylesheet" href="styles2.css" />
+    <!-- <link rel="stylesheet" href="about.css" /> -->
+    <link rel="stylesheet" href="styles2.css">
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-800 font-sans">
-    <header class="bg-white shadow-sm py-4">
-      <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-xl font-['Pacifico'] text-gray-800">Recipe Finder</h1>
+    <header class="bg-gradient-to-r from-primary to-secondary shadow-md py-4 relative z-20">
+      <div class="container mx-auto px-4 flex justify-around items-center">
+        <h1 class="text-xl font-pacifico text-white drop-shadow-md">
+          Recipe Finder
+        </h1>
         <nav>
           <ul class="flex space-x-6">
             <li>
               <a
                 href="index.html"
-                class="text-gray-600 hover:text-primary font-medium"
+                class="text-xl font-pacifico text-white drop-shadow-md"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="recipe.html"
-                class="text-gray-600 hover:text-primary font-medium"
+                class="text-xl font-pacifico text-white drop-shadow-md"
                 >Recipes</a
               >
             </li>
             <li>
               <a
                 href="#categories"
-                class="text-gray-600 hover:text-primary font-medium"
+                class="text-xl font-pacifico text-white drop-shadow-md"
                 >Categories</a
               >
             </li>
             <li>
-              <a
-                href="about.html"
-                class="text-primary font-medium underline"
+              <a href="#" class="text-xl font-pacifico text-white drop-shadow-md underline"
                 >About</a
               >
             </li>
           </ul>
         </nav>
-        <div class="flex items-center space-x-4">
-          <a href="signin.html">
-            <button
-              class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
-            >
-              Sign In
-            </button>
-          </a>
-        </div>
+        
       </div>
     </header>
+    <!-- Hero Section -->
+<section class="relative z-1 h-[maxvh] flex items-center justify-center text-center overflow-hidden">
+  <img
+    src="https://images.unsplash.com/photo-1601315576609-0d0d7ed0f2d3?auto=format&fit=crop&w=1920&q=80"
+    alt="Hero background"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-90"></div>
+  <div class="relative z-10 px-4 py-40 max-w-3xl text-white">
+    <h2 class="text-5xl font-bold mb-4 drop-shadow-lg py-5">Meet Our Passionate Team</h2>
+    <p class="text-2xl drop-shadow-md">
+      Discover the story behind Recipe Finder and the people who bring flavors to your table.
+    </p>
+  </div>
+</section>
+
     <main class="container mx-auto px-4 py-12">
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image: url('https://readdy.ai/api/search-image?query=beautiful%20food%20photography%20of%20colorful%20fresh%20ingredients%20and%20prepared%20dishes%20arranged%20artistically%20on%20a%20rustic%20wooden%20table%2C%20with%20soft%20natural%20lighting%20creating%20an%20inviting%20atmosphere%2C%20professional%20food%20styling%20with%20vibrant%20vegetables%2C%20herbs%2C%20and%20garnishes%20adding%20pops%20of%20color&width=1920&height=1080&seq=bg2&orientation=landscape');
+        "
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-[5px]"
+      ></div>
+      
+      <div
+        class="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl w-full max-w-5xl p-10 relative mx-auto z-10 "
+      >
       <h2 class="text-4xl font-bold mb-6 text-gray-800">About Us</h2>
       <p class="mb-6 text-lg leading-relaxed">
-        Welcome to Recipe Finder, your ultimate destination for discovering delicious recipes from around the world. Our mission is to inspire and empower home cooks of all skill levels to create amazing meals with ease and confidence.
+        Welcome to Recipe Finder, your ultimate destination for discovering
+        delicious recipes from around the world. Our mission is to inspire and
+        empower home cooks of all skill levels to create amazing meals with ease
+        and confidence.
       </p>
       <p class="mb-6 text-lg leading-relaxed">
-        Our team of culinary experts carefully curates and tests every recipe to ensure quality, flavor, and simplicity. Whether you're looking for quick weeknight dinners, healthy options, or indulgent treats, Recipe Finder has something for everyone.
+        Our team of culinary experts carefully curates and tests every recipe to
+        ensure quality, flavor, and simplicity. Whether you're looking for quick
+        weeknight dinners, healthy options, or indulgent treats, Recipe Finder
+        has something for everyone.
       </p>
       <p class="mb-6 text-lg leading-relaxed">
-        We believe that cooking should be enjoyable and accessible, and we strive to provide clear instructions, helpful tips, and beautiful photos to guide you every step of the way.
+        We believe that cooking should be enjoyable and accessible, and we
+        strive to provide clear instructions, helpful tips, and beautiful photos
+        to guide you every step of the way.
       </p>
       <section class="mt-12">
         <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
         <p class="mb-6 text-lg leading-relaxed">
-          Founded in 2023, Recipe Finder started as a passion project to bring together food lovers and share the joy of cooking. Over time, it has grown into a vibrant community of home chefs who share their favorite recipes and culinary experiences.
+          Founded in 2023, Recipe Finder started as a passion project to bring
+          together food lovers and share the joy of cooking. Over time, it has
+          grown into a vibrant community of home chefs who share their favorite
+          recipes and culinary experiences.
         </p>
       </section>
       <section class="mt-12">
         <h3 class="text-2xl font-semibold mb-4">Meet the Team</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300"
+          >
             <img
               src="https://randomuser.me/api/portraits/women/44.jpg"
               alt="Jane Doe"
@@ -121,7 +156,9 @@
             <h4 class="text-xl font-bold mb-1">Jane Doe</h4>
             <p class="text-gray-600">Founder & Head Chef</p>
           </div>
-          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div
+            class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300"
+          >
             <img
               src="https://randomuser.me/api/portraits/men/46.jpg"
               alt="John Smith"
@@ -130,7 +167,9 @@
             <h4 class="text-xl font-bold mb-1">John Smith</h4>
             <p class="text-gray-600">Recipe Developer</p>
           </div>
-          <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div
+            class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300"
+          >
             <img
               src="https://randomuser.me/api/portraits/women/65.jpg"
               alt="Emily Johnson"
